@@ -1,4 +1,4 @@
-package com.huaan.mixwebapp.rest;
+package com.huaan.jmeasure.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
