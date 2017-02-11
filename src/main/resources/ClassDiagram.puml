@@ -1,0 +1,34 @@
+@startuml
+abstract class Measure
+class Result
+class EchartsMeasure
+interface IAlgorithm
+class FixTimeMultilThreadAlgorithm
+
+Measure-->IAlgorithm
+Measure-->Result
+Measure<|--EchartsMeasure
+IAlgorithm<|..FixTimeMultilThreadAlgorithm
+
+abstract class Measure {
+IAlgorithm algorithm
+Result result
+run()
+show()
+}
+
+class FixTimeMultilThreadAlgorithm {
+Result run()
+}
+
+class Result {
+String desc
+List<Point> points
+}
+
+class EchartsMeasure {
+show()
+}
+
+
+@enduml
